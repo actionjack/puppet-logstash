@@ -10,7 +10,7 @@
 #
 # Sample Usage:
 #
-class logstash::shipper {
+class logstash::shipper inherits logstash::params {
   file {'/etc/logstash/conf.d/shipper.conf':
     mode    => '0644',
     owner   => 'root',

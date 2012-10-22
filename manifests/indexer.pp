@@ -10,7 +10,7 @@
 #
 # Sample Usage:
 #
-class logstash::indexer {
+class logstash::indexer inherits logstash::params {
   file {'/etc/logstash/conf.d/indexer.conf':
     mode    => '0644',
     owner   => 'root',
@@ -20,3 +20,4 @@ class logstash::indexer {
     require => Class['logstash::packages']
   }
 }
+
