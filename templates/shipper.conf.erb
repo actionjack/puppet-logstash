@@ -1,0 +1,11 @@
+output {
+  amqp {
+    host          => "<%= amqp_host %>"
+    exchange_type => "fanout"
+    name          => "<%= amqp_exchange_name %>"
+    vhost         => "<%= amqp_virtual_host %>"
+    user          => "<%= amqp_username %>"
+    assword      => "<%= amqp_userpassword %>"
+  }
+}
+

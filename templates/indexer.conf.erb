@@ -1,0 +1,22 @@
+input {
+  amqp {
+    host      => "<%= amqp_host %>"
+    name      => "<%= amqp_queue_name %>"
+    exchange  => "<%= amqp_exchange_name %>"
+    vhost     => "<%= amqp_virtual_host %>"
+    user      => "<%= amqp_username %>"
+    password  => "<%= amqp_userpassword %>"
+    type      => "all"
+    exclusive => false 
+  }
+}
+
+filter {
+  # your filters here
+}
+
+output {
+  elasticsearch {
+    host  => "<%= elasticsearch_host %>"
+  }
+}
