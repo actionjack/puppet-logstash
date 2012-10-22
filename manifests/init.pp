@@ -49,5 +49,5 @@ class logstash (
 
   include logstash::packages
   include logstash::service
-  include logstash::inputs::syslog
+  include logstash::input::syslog
 }
