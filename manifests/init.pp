@@ -38,12 +38,12 @@
 #    }
 #
 class logstash (
-  $amqp_host = undef,
-  $amqp_queue_name = undef,
+  $amqp_host          = undef,
+  $amqp_queue_name    = undef,
   $amqp_exchange_name = undef,
-  $amqp_virtual_host = undef,
-  $amqp_username = undef,
-  $amqp_userpassword = undef,
+  $amqp_virtual_host  = undef,
+  $amqp_username      = undef,
+  $amqp_userpassword  = undef,
   $elasticsearch_host = undef
 ) inherits logstash::params {
 
