@@ -10,7 +10,13 @@
 #
 # Sample Usage:
 #
-class logstash::shipper inherits logstash::params {
+class logstash::shipper (
+  $amqp_host,
+  $amqp_exchange_name,
+  $amqp_virtual_host,
+  $amqp_username,
+  $amqp_userpassword
+) inherits logstash::params {
   file {'/etc/logstash/conf.d/shipper.conf':
     mode    => '0644',
     owner   => 'root',

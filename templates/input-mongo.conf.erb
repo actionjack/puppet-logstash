@@ -1,0 +1,8 @@
+input {
+  file {
+    type => "mongo"
+
+    # Wildcards work here :)
+    path => [ "<%= mongodblogpath %>*" ]
+  }
+}
